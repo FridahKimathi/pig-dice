@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</head>
+<h1>Pig-Dice</h1>
+<body>
+    <div class="container">
+        <div class="intro">
+    <h2>Rules</h2>
+<ol>
+    <li>The game consists of two players</li>
+    <li>At any point in time during either players turn,the player faces two decisions:
+       <h5><strong>the player rolls a</strong> </h5>
+        <ul>
+            <li><strong>1:</strong>The player scores nothing and it becomes the opponents turn</li>
+            <li><strong>2-6:</strong>The number is added to the player's turn total and the players turn continues </li>
+        </ul>
+            <h5><strong>Hold:</strong></h5>
+            <p>The turn total is added to the player's score and it becomes the opponent's turn</p>
+    <li>The first player to score 100 points wins</li>
+        </li>
+</ol>
+<P id="no-player"> Username <strong>MUST</strong> be entered</P>
+<button id="start-btn">onClick=""  Start Game</button>
+</div>
+<div class="names">
+<h3>Enter player names</h3>
+<label for="name">Player1</label>
+<input type="text" id="player1">
+<br>
+<label for="name">Player2</label>
+<input type="text" id="player2">
+<button>Play</button>
+</div>
+<div class="firstplayer">
+<p><strong><em>Turn:Player1</em></strong></p>
+<div id="die1" class="die">0</div>
+<div id="die2" class="die">0</div>
+<button>Roll Dice</button>
+<button>Hold</button>
+<h4 id="point"></h4>
+</div>
+<div class="secondplayer">
+<p><strong><em>Turn:Player2</em></strong></p>
+<div id="die1" class="die">0</div>
+<div id="die2" class="die">0</div>
+<button>Roll Dice</button>
+<button>Hold</button>
+<h4 id="point"></h4>
+</div>
+<div class="gameover">
+<p id="gameover">Game Over!!!!</p>
+<p>The winner is:</p>
+<p>The winning score is:</p>
+<button id="play-again">Play Again</button>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
