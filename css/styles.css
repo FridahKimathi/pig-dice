@@ -1,3 +1,36 @@
-.firstplayer,.secondplayer,.names,#no-player,.gameover{
-    display:none;
+ .noplayer{
+     display:none;
+ }
+body{
+     background-image:url(https://c1.staticflickr.com/4/3265/3145375973_d01ed2a6d4_b.jpg);
+     color: white;
+     font-family: 'Rock Salt', cursive;
+
 }
+div.dice{
+    width:32px;
+    background:maroon;
+    border-radius: 50% solid;
+    padding:10px;
+    font-size: 22px;
+    text-align:center;
+    margin:5px;
+}
+.player2{
+    float:right;
+}
+#play-again{
+    margin-left: 28%;
+    font-size:15px;
+    position:fixed;
+    bottom: 0%;
+}
+button{
+    color:maroon;
+}
+h1{
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 10%;
+}
+
