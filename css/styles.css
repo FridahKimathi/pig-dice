@@ -16,9 +16,7 @@ div.dice{
     text-align:center;
     margin:5px;
 }
-.player2{
-    float:right;
-}
+
 #play-again{
     margin-left: 28%;
     font-size:15px;

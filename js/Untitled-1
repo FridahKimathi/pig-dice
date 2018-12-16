@@ -1,0 +1,37 @@
+
+
+// User-interface logic
+$(document).ready(function () {
+
+    var r1 = Math.floor(Math.random() * 6) + 1;
+    
+    var r2 = Math.floor(Math.random()* 6) + 1;
+    
+    var diceTotal = r1 + r2;
+
+    $("#die1").innerHTML = r1;
+    $("#die2").innerHTML= r2;
+    $("points").innerHTML = "You just rolled" + diceTotal + "!!"
+    if (r1 == 1 || r2 == 1) {
+        diceTotal = 0;
+        $("points").innerHTML = "Your total" + diceTotal + "!!" + "Your turn is over"
+    } else if (points.innerHTML = "100") {
+         $(".gameover").get();
+    }
+
+
+    $("#start-btn").click(function () {
+        $(".intro").hide();
+        $(".names").show();
+
+        $("#playnow").click(function () {
+            $(".names").hide();
+            $(".player").show();
+        })
+        $     else
+
+    });
+
+        function();
+        $(".winner").text(diceTotal + "/100");
+    });
