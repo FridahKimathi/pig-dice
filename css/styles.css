@@ -31,4 +31,18 @@ h1{
     font-style: italic;
     margin-right: 10%;
 }
-
+.hold:hover{
+    background: white;
+    color:black;
+    border: 1px solid maroon;
+}
+.roll:hover{
+    background: white;
+    color:black;
+    border: 1px solid maroon;
+}
+#start-btn:hover{
+    background: white;
+    color:black;
+    border: 1px solid maroon;
+}

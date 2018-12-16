@@ -9,7 +9,9 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
 </head>
 
 
@@ -48,9 +50,9 @@
                     <div id="die1" class="dice">0</div>
 
                     <div id="die2" class="dice">0</div>
-                    <button id=roll" onClick="pigDice()">Roll Dice</button>
-                    <br>
-                    <button id="hold">Hold</button>
+                    <button class="roll" onClick="pigDice()">Roll Dice</button>
+                    
+                    <button class="hold">Hold</button>
                     <h4 id="points"></h4>
 
                 </div>
@@ -65,9 +67,9 @@
                     <div id="die3" class="dice">0</div>
 
                     <div id="die4" class="dice">0</div>
-                    <button id=roll">Roll Dice</button>
-                    <br>
-                    <button>Hold</button>
+                    <button class="roll">Roll Dice</button>
+                    
+                    <button class="hold">Hold</button>
                     
                     <h4 id="points"></h4>
                 </div>
@@ -79,9 +81,7 @@
 
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script>
+
 </body>
 
 </html>
