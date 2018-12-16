@@ -1,4 +1,4 @@
- .noplayer{
+ .noplayer,.player1,.player2{
      display:none;
  }
 body{
@@ -42,5 +42,7 @@ h1{
     border: 1px solid maroon;
 }
 #start-btn:hover{
-   
+    background: white;
+    color:black;
+    border: 1px solid maroon;
 }
