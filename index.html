@@ -37,6 +37,16 @@
                     <li>The first player to score 100 points wins</li>
                     </li>
                 </ol>
+                <form>
+                    <div class="formgroup">
+                        <label for="name">Player 1:</label>*
+                        <input type="text" id="playerone" class="form-control" placeHolder="Enter name" required/>
+                    </div>
+                    <div class="formgroup">
+                            <label for="name">Player 2:</label>*
+                            <input type="text" id="playertwo" class="form-control" placeholder="Enter name" required/>                        
+                    </div>
+                </form>
 
                 <button id="start-btn">Start Game</button>
             </div>
@@ -44,8 +54,8 @@
             
             <div class="player1">
                 <div class="col-md-6">
-                    <label for="name">Player 1:</label>
-                    <input type="text" id="playerone" class="form-control" placeHolder="Enter name"/>
+                    <p><span class="playerone"></span></p>
+                    
                     <h4 class="points"></h4>
             
                     <button type="submit" id="player1roll" class="roll" >Roll Dice</button>
@@ -58,10 +68,7 @@
             </div>
             <div class="player2">
                 <div class=col-md-6>
-                    <label for="name">Player 2:</label>
-                    <input type="text" id="playertwo" class="form-control" placeholder="Enter name" />
-
-
+                    <p><span class="playertwo"></span></p>
 
                     <h4 class="points"></h4>
                     

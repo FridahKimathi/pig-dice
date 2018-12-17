@@ -41,19 +41,18 @@ this.tempValue=0; //tempvalue
 
 $(document).ready(function(){
             $("#start-btn").click(function(){
+                
+
+                var playernames = ["playerone","playertwo"]
+                playernames.forEach(function(playername){
+                    var playerInput = $ ("input#" + playername).val();
+                    $("." + playername).text(playerInput);
+
                 $(".player1").show();
                 $(".intro").hide();
-                player1=new player(true);
-                player2=new player(false);
-            
-        var firstPlayerName=$("#playerone").val();
-        var secondPlayerName=$("#playertwo").val();
-        firstPlayerName=player1.name;
-        secondPlayerName=player2.name;
-            if(firstPlayerName.length ==0 || secondPlayerName.length ==0){
-                $("#no-player").show();
-            }
-    })
+                });
+            });
+    
     $(".player1 #player1roll" ).click(function(){
         var diceValue1 = rollDice(); 
         if(diceValue1 ==1){
