@@ -54,21 +54,18 @@ $(document).ready(function(){
                 $("#no-player").show();
             }
     })
-    $(".roll" ).click(function(){
-       var diceValue = rollDice(); 
-       
-       if(diceValue ==1){
-        player1.tempValue = 0;
-           alert("You rolled a one!!Your turn is over");
-          
-           
-       }else{
-           player1.tempValue+=diceValue;
-       }
-       $("#points").html(player1.tempValue);
-    });
+    $(".player1 #player1roll" ).click(function(){
+        var diceValue1 = rollDice(); 
+        if(diceValue1 ==1){
+         player1.tempValue = 0;  
+            alert("You rolled a one!!Your turn is over");
+        }else{
+            player1.tempValue+=diceValue1;
+        }
+        $(".points").html(player1.tempValue);
+    })
 
-    $(".roll" ).click(function(){
+    $(".player2 #player2roll" ).click(function(){
         var diceValue2 = rollDice(); 
         if(diceValue2 ==1){
          player2.tempValue = 0;  
@@ -76,21 +73,21 @@ $(document).ready(function(){
         }else{
             player2.tempValue+=diceValue2;
         }
-        $("#points").html(player2.tempValue);
+        $(".points").html(player2.tempValue);
     })
     $(".hold").click(function(){
         $(".player1").hide();
         $(".player2").show();
         player1.hold();
         player1.diceTotal = player1.tempValue;
-        $("#points").html(player1.diceTotal)
+        $(".points").html(player1.diceTotal)
         player1.winnerFind();
     })
 
     $(".hold").click(function(){
         player2.hold();
         player1.diceTotal = player1.tempValue;
-        $("#points").html(player2.diceTotal);
+        $(".points").html(player2.diceTotal);
         player2.winnerFind();
         })
         $("#play-again").click(function() {

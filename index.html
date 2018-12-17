@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Patrick+Hand" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
@@ -40,19 +41,17 @@
                 <button id="start-btn">Start Game</button>
             </div>
             <P class="no-player"> Username <strong>MUST</strong> be entered</P>
-
+            
             <div class="player1">
                 <div class="col-md-6">
                     <label for="name">Player 1:</label>
                     <input type="text" id="playerone" class="form-control" placeHolder="Enter name"/>
+                    <h4 class="points"></h4>
             
-
-                    <h4 id="points"></h4>
-                    <br>
                     <button type="submit" id="player1roll" class="roll" >Roll Dice</button>
                     <br>
                     <br>
-                    <button class="hold">Hold</button>
+                    <button class="hold" id="player1hold">Hold</button>
                    
 
                 </div>
@@ -64,7 +63,7 @@
 
 
 
-                    <h4 id="points"></h4>
+                    <h4 class="points"></h4>
                     
                     <br>
                     <button type="submit" id="player2roll" class="roll"> Roll Dice</button>
