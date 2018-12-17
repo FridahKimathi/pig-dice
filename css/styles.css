@@ -2,7 +2,10 @@
      display:none;
  }
 body{
-     
+    background-image:url(https://ksr-ugc.imgix.net/assets/000/683/557/f93cb321c560e8dc454c9fea6d1b87ae_original.jpg?ixlib=rb-1.1.0&w=680&fit=max&v=1371584032&auto=format&gif-q=50&q=92&s=713a66ba48c90b4b7576b608237ca429);
+    background-size: cover;
+     color: black;
+     font-family: 'Patrick Hand', cursive;
     }
 h1{
     font-family: 'Monoton', cursive;
