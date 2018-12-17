@@ -7,8 +7,8 @@ function player(name, roll, turn, diceTotal, tempValue) {
     this.name = name;
     this.roll = 0;
     this.turn = turn;
-    this.diceTotal = 0; //totalScore
-    this.tempValue = 0; //tempvalue
+    this.diceTotal = 0; 
+    this.tempValue = 0; 
 }
 player.prototype.hold = function () {
     this.tempValue += this.diceTotal;
