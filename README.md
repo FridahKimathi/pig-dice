@@ -1,4 +1,4 @@
-# quiz-board
+# pig-Dice
 ## Developer  information:
     Fridah Kimathi
 ### Project Description:
