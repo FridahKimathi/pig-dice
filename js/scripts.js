@@ -1,57 +1,106 @@
 //Business logic
-$(document).ready(function(){
-function player(name,roll,points,){
+ var rollDice= function(){
+   return Math.floor(Math.random()*6)+1;
+ }    
+function player(name,roll,turn,diceTotal,tempValue){
 this.name=name;
 this.roll=0;
-this.points=0;
+this.turn=turn;
+this.diceTotal=0; //totalScore
+this.tempValue=0; //tempvalue
+}
+   player.prototype.hold=function(){
+       this.tempValue +=this.diceTotal;
 
-    var die1=$("#die1").get();
-    var die2=$("#die2").get();
-    var points=$("#points").get();
-    function rollDice(r1,r2){
-    var r1=new rollDice (Math.floor(Math.random()*6)+1);
-    var r2=new rollDice (Math.floor(Math.random()*6)+1);
+   }
+   player.prototype.roll1=function(){
+       if(this.roll ==1){ 
+           this.tempValue ==0;   
+           alert("You just rolled a one!!!Your turn is OVER!!")
+       }else{
+           this.tempValue ==this.roll;
+       }
     }
-    this.roll=rollDice;
-    rollDice.prototype.diceTotal=function(){var diceTotal=r1+r2;
+    player.prototype.winnerFind=function(){
+     if(this.diceTotal >=100){
+           alert("You won!!")
+       }
     }
-
-   $ (die1).html()=r1;
-    $(die2).html()=r2;
-    $(points).html()="You just rolled" +diceTotal+"!!"
-        if(r1==1 || r2==1){
-            diceTotal=0;
-            $(points).html()= "Your total" +diceTotal+"!!"+"You turn is over"
-        }else if("diceTotal ==100"){
-            $(points).html()="this.name"+"You win!!"
+    player.prototype.changeturn=function(){
+        if(this.roll ==1){
+        this.turn=false;}
+        else{
+            this.turn =true;
         }
+    }
+
     
 
-    }
-});
 
  // User-interface logic
- $(document).ready(function(){
-    $("#start-btn").click(function(){
-        $(".intro").hide();
-        $(".player1",).show();
+
+$(document).ready(function(){
+            $("#start-btn").click(function(){
+                $(".player1").show();
+                $(".intro").hide();
+                player1=new player(true);
+                player2=new player(false);
+            
         var firstPlayerName=$("#playerone").val();
         var secondPlayerName=$("#playertwo").val();
-        if(firstPlayerName.length==0 || secondPlayerName.length ==0){
-            $("no-player").show();
-        }else{
-            $("no-player").hide();
-        }
-        })
-
-        $(".roll").click(function(){
-            player.roll=rollDice();
-            
-        })
-
-
+        firstPlayerName=player1.name;
+        secondPlayerName=player2.name;
+            if(firstPlayerName.length ==0 || secondPlayerName.length ==0){
+                $("#no-player").show();
+            }
+    })
+    $(".roll").click(function(){
+       var diceValue = rollDice(); 
+       
+       if(diceValue ==1){
+        player1.tempValue = 0;
+           alert("You rolled a one!!Your turn is over");
+          
+           
+       }else{
+           player1.tempValue+=diceValue;
+       }
+       $("#points").html(player1.tempValue);
+           //  else if(this.diceTotal >=100){
+    //        alert("You won!")
+    //    }else{player1.roll =rollDice()}
     });
 
+    $(".roll").click(function(){
+        var diceValue = rollDice();
+        if(diceValue ==1){
+            player2.tempValue = 0;
+            alert("You rolled a one!!Your turn is over");  
+        }else{
+            player2.tempValue+=diceValue;
+        }
+        $("#points").html(player2.tempValue);
+
+    });
+    $(".hold").click(function(){
+        $(".player1").hide();
+        $(".player2").show();
+        player1.hold();
+        player1.diceTotal = player1.tempValue;
+        $("#points").html(player1.diceTotal)
+        player1.winnerFind();
+    })
+
+    $(".hold").click(function(){
+        player2.hold();
+        player1.diceTotal = player1.tempValue;
+        $("#points").html(player2.diceTotal);
+        player2.winnerFind();
+        })
+        $("#play-again").click(function() {
+            event.preventDefault();
+            location.reload();
+    });
 
 
 
