@@ -37,41 +37,37 @@
                     <li>The first player to score 100 points wins</li>
                     </li>
                 </ol>
-                <form>
-                    <div class="formgroup">
-                        <label for="name">Player 1:</label>*
-                        <input type="text" id="playerone" class="form-control" placeHolder="Enter name" required />
-                    </div>
-                    <div class="formgroup">
-                        <label for="name">Player 2:</label>*
-                        <input type="text" id="playertwo" class="form-control" placeholder="Enter name" required />
-                    </div>
-                </form>
+                
+                    
+                       
+                
 
                 <button id="start-btn">Start Game</button>
             </div>
             <P class="no-player"> Username <strong>MUST</strong> be entered</P>
-
+            
             <div class="player1">
                 <div class="col-md-6">
-                    <p><span class="playerone"></span></p>
-
+                    
+                        <label for="name">Player 2:</label>*
+                        <input type="text" id="playertwo" class="form-control" placeholder="Enter name" required/>                 
                     <h4 class="points"></h4>
-
-                    <button type="submit" id="player1roll" class="roll">Roll Dice</button>
+            
+                    <button type="submit" id="player1roll" class="roll" >Roll Dice</button>
                     <br>
                     <br>
                     <button class="hold" id="player1hold">Hold</button>
-
+                   
 
                 </div>
             </div>
             <div class="player2">
                 <div class=col-md-6>
-                    <p><span class="playertwo"></span></p>
+                        <label for="name">Player 1:</label>*
+                        <input type="text" id="playerone" class="form-control" placeHolder="Enter name" required/>
 
                     <h4 class="points"></h4>
-
+                    
                     <br>
                     <button type="submit" id="player2roll" class="roll"> Roll Dice</button>
                     <br>
@@ -83,7 +79,7 @@
 
 
 
-
+            
 
         </div>
     </div>
