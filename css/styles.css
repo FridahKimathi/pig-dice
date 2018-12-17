@@ -1,4 +1,4 @@
- .no-player,.player1,.player2,#play-again{
+ .no-player,.player1,.player2{
      display:none;
  }
 body{
@@ -8,9 +8,9 @@ body{
 
 }
 #points{
-    width:40px;
+    width:50px;
     background:maroon;
-    border-radius: 70% solid;
+    border-radius: 80% solid;
     padding:10px;
     font-size: 15px;
     text-align:center;

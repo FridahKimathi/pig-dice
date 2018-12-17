@@ -54,7 +54,7 @@ $(document).ready(function(){
                 $("#no-player").show();
             }
     })
-    $(".roll").click(function(){
+    $(".roll" ).click(function(){
        var diceValue = rollDice(); 
        
        if(diceValue ==1){
@@ -66,22 +66,18 @@ $(document).ready(function(){
            player1.tempValue+=diceValue;
        }
        $("#points").html(player1.tempValue);
-           //  else if(this.diceTotal >=100){
-    //        alert("You won!")
-    //    }else{player1.roll =rollDice()}
     });
 
-    $(".roll").click(function(){
-        var diceValue = rollDice();
-        if(diceValue ==1){
-            player2.tempValue = 0;
-            alert("You rolled a one!!Your turn is over");  
+    $(".roll" ).click(function(){
+        var diceValue2 = rollDice(); 
+        if(diceValue2 ==1){
+         player2.tempValue = 0;  
+            alert("You rolled a one!!Your turn is over");
         }else{
-            player2.tempValue+=diceValue;
+            player2.tempValue+=diceValue2;
         }
         $("#points").html(player2.tempValue);
-
-    });
+    })
     $(".hold").click(function(){
         $(".player1").hide();
         $(".player2").show();
@@ -100,6 +96,7 @@ $(document).ready(function(){
         $("#play-again").click(function() {
             event.preventDefault();
             location.reload();
+        })
     });
 
 
