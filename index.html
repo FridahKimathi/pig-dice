@@ -8,24 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Monoton|Patrick+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|The+Girl+Next+Door" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 </head>
-
-
 <body>
     <div class="container">
         <div class=row>
             <h1 class="panel-header">Pig-Dice</h1>
             <div class="intro">
-                <h2>Rules</h2>
+                <h2><strong>Rules</strong></h2>
                 <ol>
                     <li>The game consists of two players</li>
                     <li>At any point in time during either players turn,the player faces two decisions:
-                        <h5><strong>the player rolls a</strong> </h5>
+                        <h5><strong>The player rolls a:</strong> </h5>
                         <ul>
                             <li><strong>1:</strong>The player scores nothing and it becomes the opponents turn</li>
                             <li><strong>2-6:</strong>The number is added to the player's turn total and the players
@@ -37,10 +35,6 @@
                     <li>The first player to score 100 points wins</li>
                     </li>
                 </ol>
-                
-                    
-                       
-                
 
                 <button id="start-btn">Start Game</button>
             </div>
@@ -49,7 +43,7 @@
             <div class="player1">
                 <div class="col-md-6">
                     
-                        <label for="name">Player 2:</label>*
+                        <label for="name">Player 1:</label>*
                         <input type="text" id="playertwo" class="form-control" placeholder="Enter name" required/>                 
                     <h4 class="points"></h4>
             
@@ -63,7 +57,7 @@
             </div>
             <div class="player2">
                 <div class=col-md-6>
-                        <label for="name">Player 1:</label>*
+                        <label for="name">Player 2:</label>*
                         <input type="text" id="playerone" class="form-control" placeHolder="Enter name" required/>
 
                     <h4 class="points"></h4>
@@ -75,11 +69,7 @@
                     <button class="hold">Hold</button>
                     <button id="play-again" class="panel-footer">Play Again</button>
                 </div>
-            </div>
-
-
-
-            
+            </div> 
 
         </div>
     </div>
