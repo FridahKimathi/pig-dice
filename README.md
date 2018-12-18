@@ -33,7 +33,8 @@
     CSS
     GIT
 ####  Link to the project:
-      [link to project](https://nkirotekim.github.io/pig-dice/)
+    
+This project was built using [GitHub Pages](https://nkirotekim.github.io/pig-dice/).
 
 MIT License
 
